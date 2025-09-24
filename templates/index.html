@@ -1,0 +1,88 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Customer Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f0ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #003366;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 2px solid #3399ff;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3399ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #2673cc;
+        }
+
+        .answer-box {
+            background-color: #cce0ff;
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            color: #003366;
+            font-size: 16px;
+        }
+
+        .question-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🤖 AI Customer Service</h1>
+    <form action="/ask" method="post">
+        <input type="text" name="question" placeholder="Ask your question" required>
+        <button type="submit">Ask</button>
+    </form>
+
+    {% if answer %}
+    <div class="answer-box">
+        <div class="question-label">Question:</div>
+        <div>{{ question }}</div>
+        <br>
+        <div class="question-label">Answer:</div>
+        <div>{{ answer }}</div>
+    </div>
+    {% endif %}
+</body>
+</html>
