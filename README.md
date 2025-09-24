@@ -10,10 +10,10 @@ This project demonstrates how to build an AI-powered customer service system usi
 
  📌 Features
 ✅ Answer customer queries directly from WhatsApp.  
-✅ Simple web interface built with **HTML + Jinja**.  
+✅ Simple web interface built with HTML + Jinja.  
 ✅ Knowledge base stored in a CSV file and converted into vectors.  
 ✅ Flexible to add new data easily.  
-✅ Scalable with future support for **MongoDB or any other database**.  
+✅ Scalable with future support for MongoDB or any other database.  
 
 
 
